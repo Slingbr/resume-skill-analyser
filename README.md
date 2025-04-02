@@ -1,7 +1,7 @@
 - Python 3.x
 - Required libraries: `tkinter`, `spacy`, `docx`, `PyPDF2`
 -  going to add a text file with a list of 100s of skills currently just has a few currently for testing purposes.
-
+- user of repo can just add to list themselves for now
 1. Install Python 3.x if not already installed.
 2. Install required dependencies using:
    ```
