@@ -17,7 +17,7 @@ class ResumeAnalyserApp:
         # Employer or Job Seeker mode
         self.mode = tk.StringVar(value="employer")
 
-        # Create the GUI layout
+
         self.create_widgets()
 
     def create_widgets(self):
@@ -61,7 +61,7 @@ class ResumeAnalyserApp:
                 return
             resume_file = open(resume_file_path, "rb")
         else:  # Job Seeker Mode
-            # asking the user for the job listing file 
+            #asking the user  job listing file 
             job_file_path = filedialog.askopenfilename(title="Select Job Listing", filetypes=[("All Files", "*.*")])
             if not job_file_path:
                 messagebox.showwarning("Warning", "Please upload the job listing file first.")
@@ -73,11 +73,11 @@ class ResumeAnalyserApp:
                 messagebox.showwarning("Warning", "Please upload your resume.")
                 return
             
-            # Open the files
+        
             job_file = open(job_file_path, "rb")
             resume_file = open(resume_file_path, "rb")
 
-        # Analysing the resume and job listing
+  
         try:
             missing_skills, extra_skills, match_percentage, is_potential_hire = analyze_job_and_resume(job_file, resume_file)
 
