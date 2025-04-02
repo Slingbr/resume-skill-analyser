@@ -28,5 +28,5 @@
 - `gui.py`: Contains the graphical user interface.
 - `resume_analyzer.py`: Handles text extraction, skill analysis, and file processing.
 
-
+Really need to change certain variable names because some for loops look unnessecarily confusing
 This project is open-source and can be modified as needed by anyone.
