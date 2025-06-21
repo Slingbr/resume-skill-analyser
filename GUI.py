@@ -14,7 +14,6 @@ class ResumeAnalyserApp:
 
         self.root.configure(bg="#f7f7f7")
 
-        # Employer or Job Seeker mode
         self.mode = tk.StringVar(value="employer")
 
 
@@ -24,7 +23,7 @@ class ResumeAnalyserApp:
         title_label = tk.Label(self.root, text="AI Resume Analyzer", font=("Helvetica", 24, "bold"), bg="#f7f7f7", fg="#4a4a4a")
         title_label.pack(pady=20)
 
-        # Mode Selection
+        
         mode_frame = tk.Frame(self.root, bg="#f7f7f7")
         mode_label = tk.Label(mode_frame, text="Select Mode:", font=("Helvetica", 14), bg="#f7f7f7", fg="#4a4a4a")
         mode_label.pack(side=tk.LEFT, padx=5)
@@ -37,15 +36,15 @@ class ResumeAnalyserApp:
 
         mode_frame.pack(pady=10)
 
-        # File upload button
+       
         upload_button = tk.Button(self.root, text="Upload Job/Resume", command=self.upload_files, font=("Helvetica", 14), bg="#4CAF50", fg="white", relief="raised")
         upload_button.pack(pady=20, ipadx=20, ipady=10)
 
-        # Result Display Area
+        
         self.result_label = tk.Label(self.root, text="", font=("Helvetica", 12), bg="#f7f7f7", fg="#4a4a4a")
         self.result_label.pack(pady=20)
 
-        # Employer's Potential Hires List
+        
         self.potential_hires_button = tk.Button(self.root, text="View Potential Hires", command=self.view_potential_hires, font=("Helvetica", 14), bg="#2196F3", fg="white", relief="raised")
         self.potential_hires_button.pack(pady=20, ipadx=20, ipady=10)
 
@@ -86,7 +85,7 @@ class ResumeAnalyserApp:
                     result_message = f"Potential Hire! Applicant's resume matches {match_percentage:.2f}% of the job listing skills."
                 else:
                     result_message = f"Applicant's resume matches {match_percentage:.2f}% of the job listing skills."
-            else:  # Job Seeker mode
+            else: 
                 result_message = f"Your resume matches {match_percentage:.2f}% of the job listing skills.\n\nMissing Skills: {', '.join(missing_skills)}"
 
             self.result_label.config(text=result_message)
